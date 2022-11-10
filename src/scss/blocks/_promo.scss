@@ -1,0 +1,57 @@
+.promo {
+min-height: 850px;
+
+    &__wrapper {
+        position: relative;
+        height: 850px;
+        width: 1600px;
+        margin: 0 auto;
+        background-color: #F8F1E3;
+
+        img {
+            position: absolute;
+            right: 0;
+            z-index: 0;
+        }
+    }
+
+    &__line {
+        &_top {
+            position: absolute;
+            z-index: 5;
+            border: 3px solid $white;
+            width: 1400px;
+            top: 99px;
+            left: 93px;
+            background-color: $white;
+        }
+        &_right {
+            position: absolute;
+            z-index: 5;
+            border: 3px solid $white;
+            height: 650px;
+            top: 99px;
+            right: 107px;
+            background-color: $white;
+        }
+        &_bottom {
+            position: absolute;
+            z-index: 5;
+            border: 3px solid $white;
+            width: 1400px;
+            bottom: 99px;
+            left: 93px;
+            background-color: $white;
+        }
+        &_left {
+            position: absolute;
+            z-index: 5;
+            border: 3px solid $white;
+            height: 650px;
+            top: 99px;
+            left: 93px;
+            background-color: $white;
+        }
+    }
+
+}
