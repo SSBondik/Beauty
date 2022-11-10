@@ -1,0 +1,138 @@
+.catalog {
+    min-height: 1000px;
+    padding-top: 100px;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 41px;
+    }
+    &__item {
+        &_pink {
+            width: 215px;
+            height: 275px;
+            background-color: #F1D2BE;
+        }
+        &_blue {
+            width: 215px;
+            height: 275px;
+            background-color: #C5DBF3;
+        }
+        &_softpink {
+            width: 215px;
+            height: 275px;
+            background-color: #FAF6D3;
+        }
+        &_softblue {
+            width: 215px;
+            height: 275px;
+            background-color: #E0DFF1;
+        }
+        &_softpurple {
+            width: 215px;
+            height: 275px;
+            background-color: #F5B2D1;
+        }
+    }
+    &__tabs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        margin-top: 20px;
+    }
+    &__tab {
+        list-style-type: none;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        width: 215px;
+        cursor: pointer;
+        transition: 0.5s all;
+        &:hover {
+           transform: scale(110%);
+        }
+        
+    }
+
+    &__content {
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin-top: 60px;
+        &-active {
+            display: flex;
+        }
+    }
+    &-item {
+        width: 380px;
+        min-height: 500px;
+        padding: 20px;
+        border: 2px solid $white;
+        overflow: hidden;
+        margin: 10px ;
+        &:hover {
+            box-shadow: 3px 3px 20px $pink;
+        }
+        &__img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 200px;
+        }
+        &__deal {
+            margin: 20px auto 0 auto;
+            position: relative;
+            height: 0;
+            width: 68px;
+            color: rgb(230, 68, 68);
+            border-top: 20px solid $grey;
+            border-left: 9px solid transparent;
+            border-right: 9px solid transparent;
+            span {
+                position: absolute;
+                bottom: 0px;
+                left: 5px;
+            }
+        }
+        &__subtitle {
+            font-weight: 500;
+            text-transform: uppercase;
+            margin: 20px 0px 0px 0px;
+            letter-spacing: .6px;
+            padding: 0 32px;
+            line-height: 1.5;
+            color: $dark;
+            display: block;
+            text-align: center;
+        }
+        &__descr{
+            color: $grey;
+            line-height: 1.3;
+            padding: 0 32px;
+            margin: 10px 0px;
+        }
+        &__price {
+            font-size: 24px;
+            text-align: center;
+        }
+        &__btn {
+            display: block;
+            height: 45px;
+            width: 130px;
+            border-radius: 12px;
+            border: none;
+            margin: 15px auto 0 auto;
+            background-color: $pink;
+            color: $white;
+            cursor: pointer; 
+            transition: 0.5s all;
+            &:hover {
+                transform: scale(110%);
+            }
+        }
+    }
+}
