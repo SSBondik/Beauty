@@ -9,30 +9,28 @@
         margin-top: 41px;
     }
     &__item {
+        width: 215px;
+        height: 275px;
+        background-color: $white;
+
+        &-img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
         &_pink {
-            width: 215px;
-            height: 275px;
-            background-color: #F1D2BE;
-        }
-        &_blue {
-            width: 215px;
-            height: 275px;
-            background-color: #C5DBF3;
-        }
-        &_softpink {
-            width: 215px;
-            height: 275px;
-            background-color: #FAF6D3;
-        }
-        &_softblue {
-            width: 215px;
-            height: 275px;
-            background-color: #E0DFF1;
+            img {
+                padding-top: 70px;
+            }
         }
         &_softpurple {
             width: 215px;
             height: 275px;
-            background-color: #F5B2D1;
+            background-color: $white;
+            img {
+                padding-top: 70px;
+            }
         }
     }
     &__tabs {
@@ -53,7 +51,14 @@
         &:hover {
            transform: scale(110%);
         }
-        
+        &-active {
+            font-size: 28px;
+            font-weight: 500;
+            color: $pink;
+            &:hover {
+                transform: scale(100%);
+            }
+        }
     }
 
     &__content {
@@ -74,6 +79,7 @@
         border: 2px solid $white;
         overflow: hidden;
         margin: 10px ;
+        transition: 0.5s all;
         &:hover {
             box-shadow: 3px 3px 20px $pink;
         }

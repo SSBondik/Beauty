@@ -1,0 +1,35 @@
+.showing {
+    margin-top: 70px;
+    height: 355px;
+    &__wrapper {
+        position: relative;
+        height: 260px;
+        margin: 25px 0;
+        background-color: #D3E5F6;
+    }
+    &__img {
+        position: absolute;
+        
+        img {
+            height: 250px;
+            width: 250px;
+            border: 6px solid $pink;
+        }
+        &-first {
+            left: 40px;
+            top: -30px;
+        }
+        &-second {
+            left: 330px;
+            bottom: -30px;
+        }
+        &-third {
+            right: 330px;
+            top: -30px;
+        }
+        &-fourth {
+            right: 40px;
+            bottom: -30px;
+        }
+    }
+}

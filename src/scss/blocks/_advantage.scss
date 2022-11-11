@@ -1,0 +1,93 @@
+.advantage {
+    margin-top: 30px;
+    
+    &__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        max-width: 920px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    &__wrapper {
+        width: 1152.12px;
+        height: 764px;
+        margin: 0 auto;
+        margin-top: 60px;
+        background: url('../img/Union.png');
+        
+        &-bg {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            left: 55px;
+            bottom: 131px;
+        }
+    }
+    &__item {
+        width: 265px;
+        height: 265px;
+        position: absolute;
+        transform: rotate(-45deg);
+        // border: 2px solid black;
+        left: 10px;
+        z-index: 15;
+        
+        &-icon {
+            position: absolute;
+            top: 82px;
+            left: 181px;
+            transform: translate(-50%, -50%);
+            img {
+                transform: rotate(45deg);
+            }
+        }
+        &-text {
+            position: absolute;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            transform: rotate(45deg);
+            top: 106px;
+        }
+        &-first {
+            left: 0%;
+            right: 77.05%;
+            top: 24.48%;
+            bottom: 40.91%;
+            
+        }
+        &-second {
+            left: 33.77%;
+            right: 43.28%;
+            top: 24.48%;
+            bottom: 40.91%;
+        }
+        &-third {
+            left: 67.54%;
+            right: 9.51%;
+            top: 24.47%;
+            bottom: 40.93%;
+        }
+        &-fourth {
+            left: 16.88%;
+            right: 60.17%;
+            top: 49.94%;
+            bottom: 15.46%;
+        }
+        &-fifth {
+            left: 50.65%;
+            right: 26.4%;
+            top: 49.94%;
+            bottom: 15.46%;
+        }
+        &-sixth {
+            left: 33.78%;
+            right: 43.27%;
+            top: 75.53%;
+            bottom: -10.13%;
+        }
+    }
+}

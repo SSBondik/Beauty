@@ -1,0 +1,39 @@
+.footer {
+    margin-top: 40px;
+    height: 200px;
+    background-color: rgb(233, 223, 223);
+    padding: 60px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+    }
+    &__items {
+        width: 500px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+    }
+    &__item {
+        color: black;
+        font-size: 14px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+    &__links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+    }
+    &__link {
+        padding: 10px;
+        img {
+            height: 40px;
+            width: 40px;
+        }
+    }
+}

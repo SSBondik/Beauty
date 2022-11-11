@@ -53,5 +53,29 @@ min-height: 850px;
             background-color: $white;
         }
     }
+    &__consultation {
+        position: absolute;
+        width: 455px;
+        height: 400px;
+        top: 200px;
+        left: 200px;
+        &-title {
+            font-size: 60px;
+            line-height: 72px;
+            font-weight: 700;
+        }
+        &-subtitle {
+            margin-top: 30px;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 600;
+        }
+        &-btn {
+            margin-top: 70px;
+            width: 289px;
+            height: 62px;
+            
+        }
+    }
 
 }
