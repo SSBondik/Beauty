@@ -34,3 +34,17 @@ a {
             transform: scale(110%);
         }
 }
+
+.close {
+    position: absolute;
+    color: red;
+    top: -3px;
+    right: 13px;
+    font-size: 60px;
+    cursor: pointer;
+    transition: all 0.5s;
+    z-index: 15;
+    &:hover {
+        transform: scale(120%);
+    }
+}
