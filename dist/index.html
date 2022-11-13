@@ -17,9 +17,9 @@
     
                 <nav>
                     <ul class="menu__list">
-                        <li class="menu__link"><a href="#">Каталог</a></li>
+                        <li class="menu__link"><a href="#catalogId">Каталог</a></li>
                         <li class="menu__link"><a data-deliveryBtn href="#">Доставка</a></li>
-                        <li class="menu__link"><a href="#">О нас</a></li>
+                        <li class="menu__link"><a href="#advantageId">О нас</a></li>
                     </ul>
                 </nav>
     
@@ -71,7 +71,7 @@
         </div>
     </section>
 
-    <section class="catalog">
+    <section id='catalogId' class="catalog">
         <div class="container">
 
             <h1 class="title">Каталог</h1>
@@ -95,14 +95,14 @@
             </div>
 
             <ul class="catalog__tabs">
-                <li class="catalog__tab catalog__tab-active">Крема</li>
+                <li class="catalog__tab catalog__tab_active">Крема</li>
                 <li class="catalog__tab">Сыворотки</li>
                 <li class="catalog__tab">Тоники</li>
                 <li class="catalog__tab">Маски</li>
                 <li class="catalog__tab">Патчи</li>
             </ul>
 
-            <div class="catalog__content catalog__content-active">
+            <div class="catalog__content">
                 <div class="catalog-item">
                     <div class="catalog-item__content">
                         <img src="img/testtab.jpg" alt="ZzZ" class="catalog-item__img">
@@ -290,7 +290,7 @@
         </div>
     </section>
     
-    <section class="advantage">
+    <section id ='advantageId' class="advantage">
         <div class="container">
             <div class="advantage__title title">Переваги КОСМЕТИКА КОСМЕТИКА</div>
             <div class="advantage__subtitle">
@@ -449,7 +449,8 @@
 
             <div id="third" class="overlay__item">
                 <div class="overlay__count">
-                    <div class="overlay__count-price">269 <span>₴</span></div>
+                    <div class="overlay__count-price">269</div>
+                    <span>₴</span>
                     <div class="overlay__count-decrease"><</div>
                     <div class="overlay__count-amount"> 1 </div>
                     <div class="overlay__count-increase">></div>

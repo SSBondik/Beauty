@@ -83,13 +83,17 @@ a {
   display: block;
 }
 
+.showFlex {
+  display: flex;
+}
+
 .hide {
   display: none;
 }
 
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
 }
 
 @keyframes fade {
@@ -234,24 +238,20 @@ a {
 .catalog__tab:hover {
   transform: scale(110%);
 }
-.catalog__tab-active {
+.catalog__tab_active {
   font-size: 28px;
   font-weight: 500;
   color: #D785A1;
 }
-.catalog__tab-active:hover {
+.catalog__tab_active:hover {
   transform: scale(100%);
 }
 .catalog__content {
-  display: none;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   align-items: flex-start;
   margin-top: 60px;
-}
-.catalog__content-active {
-  display: flex;
 }
 .catalog-item {
   width: 380px;
@@ -380,7 +380,7 @@ a {
   padding: 5px;
   width: 56px;
   height: 60px;
-  transition: all 0.4s;
+  transition: all 1s;
   cursor: pointer;
   border: 3px solid rgb(255, 255, 255);
 }
@@ -424,6 +424,12 @@ a {
 .overlay__count-price {
   position: absolute;
   top: 0;
+  font-size: 30px;
+}
+.overlay__count span {
+  position: absolute;
+  top: 0;
+  right: 100px;
   font-size: 30px;
 }
 .overlay__count-amount, .overlay__count-decrease, .overlay__count-increase {
