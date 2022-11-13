@@ -48,3 +48,10 @@ a {
         transform: scale(120%);
     }
 }
+
+.divider {
+    width: 345px;
+    height: 0px;
+    border: 1px solid rgba(77, 77, 77, 0.7);
+    margin-top: 31px;
+}

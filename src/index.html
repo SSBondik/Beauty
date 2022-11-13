@@ -414,12 +414,22 @@
         </div>
     </footer>
 
+    <!-- Модальное окно выбранного товара -->
     <section class="overlay">
         <div class="overlay__wrapper">
             <div class="overlay__close close">&times;</div>
 
-            <div id="second" class="overlay__item">
-                <img src="img/testtab.jpg" alt="ZzZ">
+            <div id="second" class="overlay__item overlay__item_slider">
+                <div class="overlay__item-show">
+                    <img src="img/testtab.jpg" alt="ZzZ">
+                </div>
+                <div class="overlay__item-hide">
+                    <div class="div"><img src="img/testtab.jpg" alt="ZzZ"></div>
+                    <div class="div"><img src="img/testtab.jpg" alt="ZzZ"></div>
+                    <div class="div"><img src="img/testtab.jpg" alt="ZzZ"></div>
+                </div>
+                
+
             </div>
 
             <div id="first" class="overlay__item">
@@ -435,7 +445,12 @@
             </div>
 
             <div id="third" class="overlay__item">
-                <div class="overlay__price">269 <span>₴</span></div>
+                <div class="overlay__count">
+                    <div class="overlay__count-price">269 <span>₴</span></div>
+                    <div class="overlay__count-decrease"><</div>
+                    <div class="overlay__count-amount"> 1 </div>
+                    <div class="overlay__count-increase">></div>
+                </div>
                 <div class="overlay__available">Є в наявності!</div>
                 <button class="overlay__btn btn">Купить</button>
             </div>
@@ -456,6 +471,7 @@
         </div>
     </section>
 
+    <!-- Модальное окно обратного звонка -->
     <section class="consultation">
         <div class="consultation__dialog">
             <div class="consultation__content">
@@ -466,6 +482,32 @@
                     <input required placeholder="Ваш номер телефону" name="phone" type="phone" class="consultation__input">
                     <button class="consultation__btn btn">Передзвоніть мені</button>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно доставки и оплаты -->
+    <section class="delivery">
+        <div class="delivery__wrapper">
+            <div class="delivery__title">ОПЛАТА ТА ДОСТАВКА</div>
+            <div class="delivery__close close">&times;</div>
+            <div class="divider"></div>
+            <div class="delivery__item">
+                <div class="delivery__subtitle">ОПЛАТА ОНЛАЙН</div>
+                <div class="delivery__text">Після підтвердження замовлення менеджер зв'язується з вами за вказаним номером телефону, далі <br> в зручний вам месенджер ми надсилаємо вам номер нашої карти. <br> Після оплати ви надсилаєте нам квитанцію про оплату і ми надсилаємо ваше замовлення.</div>
+                <div class="divider"></div>
+            </div>
+            <div class="delivery__item">
+                <div class="delivery__subtitle">накладений платіж</div>
+                <div class="delivery__text">Наразі відправляємо або по повній оплаті, або предплата 50%. Залишок вказуємо наложкою. <br>
+                <span>При наложці слід пам'ятати, що доведеться сплатити вартість наложки та відсоток від суми.</span>
+                </div>
+                <div class="divider"></div>
+            </div>
+            <div class="delivery__item">
+                <div class="delivery__subtitle">ДОСТАВКА</div>
+                <div class="delivery__text">Доставка здійснюється через службу доставки Нова Пошта</div>
+                <div class="divider"></div>
             </div>
         </div>
     </section>

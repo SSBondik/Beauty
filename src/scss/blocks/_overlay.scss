@@ -7,7 +7,7 @@
     width: 100vw;
     top: 0;
     background: rgba(0, 0, 0, 0.4);
-    z-index: 10;
+    z-index: 15;
     &__wrapper {
         display: grid;
         position: absolute;
@@ -16,7 +16,7 @@
         transform: translate(-50%, -50%);
         min-height: 800px;
         width: 1100px;
-        background: url('../img/overloy_bg.png');
+        background: url('../img/overloy_bg.png') center center/cover no-repeat;
         grid-template-columns: repeat(3, 33.3%);
         grid-template-rows: repeat(2, 50%);
         gap: 0;
@@ -24,12 +24,49 @@
     &__item {
         padding: 20px;
         img {
+            padding-left: 20px;
+            padding-right: 20px;
             width: 100%;
             height: 100%;
         }
+
+        &_slider {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(auto-fill, 30%);
+            gap: 10px;
+        }
+        &-show{
+            padding-left: 20px;
+            padding-right: 20px;
+            grid-column: 1/4;
+            grid-row: 1/3;
+        }
+        &-hide {
+            display: flex;
+            grid-column: 1/4;
+            grid-row: 3/4;
+            
+            justify-content: center;
+            
+            div {
+                padding: 8%;
+            }
+            img {
+                padding: 5px;
+                width: 56px;
+                height: 60px;
+                transition: all 0.4s;
+                cursor: pointer;
+                border: 3px solid $white;
+                &:hover {
+                    border-color: $pink;
+                }
+            }
+        }
         
     }
-    &__title, &__price {
+    &__title{
         font-size: 30px;
         margin: 0 auto;
         margin-top: 30px;
@@ -56,8 +93,37 @@
             }
         }
     }
-    &__price {
-        margin-top: 123px;
+    &__count {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        margin-top: 80px;
+        padding-top: 60px;
+        &-price {
+            position: absolute;
+            top: 0;
+            font-size: 30px;
+        }
+        &-amount, &-decrease, &-increase {
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: 300;
+        }
+        &-decrease, &-increase {
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+                font-weight: 500;
+                color: $pink;
+            }
+        }
+        &-decrease {
+            margin-right: 10px;
+            
+        }
+        &-increase {
+            margin-left: 10px;
+        }
     }
     &__available {
         color: $green;

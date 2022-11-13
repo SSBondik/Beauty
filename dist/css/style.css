@@ -50,6 +50,13 @@ a {
   transform: scale(120%);
 }
 
+.divider {
+  width: 345px;
+  height: 0px;
+  border: 1px solid rgba(77, 77, 77, 0.7);
+  margin-top: 31px;
+}
+
 .menu {
   min-height: 150px;
   padding-top: 30px;
@@ -308,7 +315,7 @@ a {
   width: 100vw;
   top: 0;
   background: rgba(0, 0, 0, 0.4);
-  z-index: 10;
+  z-index: 15;
 }
 .overlay__wrapper {
   display: grid;
@@ -318,7 +325,7 @@ a {
   transform: translate(-50%, -50%);
   min-height: 800px;
   width: 1100px;
-  background: url("../img/overloy_bg.png");
+  background: url("../img/overloy_bg.png") center center/cover no-repeat;
   grid-template-columns: repeat(3, 33.3%);
   grid-template-rows: repeat(2, 50%);
   gap: 0;
@@ -327,10 +334,44 @@ a {
   padding: 20px;
 }
 .overlay__item img {
+  padding-left: 20px;
+  padding-right: 20px;
   width: 100%;
   height: 100%;
 }
-.overlay__title, .overlay__price {
+.overlay__item_slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fill, 30%);
+  gap: 10px;
+}
+.overlay__item-show {
+  padding-left: 20px;
+  padding-right: 20px;
+  grid-column: 1/4;
+  grid-row: 1/3;
+}
+.overlay__item-hide {
+  display: flex;
+  grid-column: 1/4;
+  grid-row: 3/4;
+  justify-content: center;
+}
+.overlay__item-hide div {
+  padding: 8%;
+}
+.overlay__item-hide img {
+  padding: 5px;
+  width: 56px;
+  height: 60px;
+  transition: all 0.4s;
+  cursor: pointer;
+  border: 3px solid rgb(255, 255, 255);
+}
+.overlay__item-hide img:hover {
+  border-color: #D785A1;
+}
+.overlay__title {
   font-size: 30px;
   margin: 0 auto;
   margin-top: 30px;
@@ -357,8 +398,36 @@ a {
 .overlay__text div span {
   font-weight: 400;
 }
-.overlay__price {
-  margin-top: 123px;
+.overlay__count {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 80px;
+  padding-top: 60px;
+}
+.overlay__count-price {
+  position: absolute;
+  top: 0;
+  font-size: 30px;
+}
+.overlay__count-amount, .overlay__count-decrease, .overlay__count-increase {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 300;
+}
+.overlay__count-decrease, .overlay__count-increase {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.overlay__count-decrease:hover, .overlay__count-increase:hover {
+  font-weight: 500;
+  color: #D785A1;
+}
+.overlay__count-decrease {
+  margin-right: 10px;
+}
+.overlay__count-increase {
+  margin-left: 10px;
 }
 .overlay__available {
   color: rgb(40, 179, 58);
@@ -416,7 +485,7 @@ a {
   height: 764px;
   margin: 0 auto;
   margin-top: 60px;
-  background: url("../img/Union.png");
+  background: url("../img/Union.png") center center/cover no-repeat;
 }
 .advantage__wrapper-bg {
   width: 100%;
@@ -607,7 +676,7 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1050;
+  z-index: 15;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -661,4 +730,48 @@ a {
   display: block;
   width: 280px;
   margin: 0 auto;
+}
+
+.delivery {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.delivery__wrapper {
+  position: relative;
+  margin: 30px 300px;
+  background: url("../img/overloy_bg.png") center center/cover no-repeat;
+  padding: 35px 0 63px 53px;
+}
+.delivery__close {
+  top: 5px;
+  right: 22px;
+  color: #4D4D4D;
+}
+.delivery__title, .delivery__subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #4D4D4D;
+  text-transform: uppercase;
+}
+.delivery__subtitle {
+  font-size: 17px;
+  line-height: 21px;
+  margin-top: 35px;
+}
+.delivery__text {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #4D4D4D;
 }
