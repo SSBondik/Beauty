@@ -1,4 +1,4 @@
-.delivery {
+.return {
     display: none;
     position: fixed;
     top: 0;
@@ -10,7 +10,11 @@
     background-color: rgba(0,0,0,.5);
     &__wrapper {
         position: relative;
-        margin: 30px 300px;
+        width: 700px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
         background: url('../img/overloy_bg.png') center center/cover no-repeat;
         padding: 35px 0 63px 53px;
     }
@@ -18,5 +22,8 @@
         top: 5px;
         right: 22px;
         color: #4D4D4D;
+    }
+    &__text {
+        width: 500px;
     }
 }
