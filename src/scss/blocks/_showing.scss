@@ -9,12 +9,15 @@
     }
     &__img {
         position: absolute;
-        
+        height: 250px;
+        width: 250px;
+        // border: 6px solid $pink;
         img {
-            height: 250px;
-            width: 250px;
-            border: 6px solid $pink;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
+
         &-first {
             left: 40px;
             top: -30px;

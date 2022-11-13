@@ -630,11 +630,13 @@ a {
 }
 .showing__img {
   position: absolute;
-}
-.showing__img img {
   height: 250px;
   width: 250px;
-  border: 6px solid #D785A1;
+}
+.showing__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .showing__img-first {
   left: 40px;
@@ -804,5 +806,35 @@ a {
   color: #4D4D4D;
 }
 .return__text {
+  width: 500px;
+}
+
+.confidentiality {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.confidentiality__wrapper {
+  position: relative;
+  width: 700px;
+  height: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../img/overloy_bg.png") center center/cover no-repeat;
+  padding: 35px 0 63px 53px;
+}
+.confidentiality__close {
+  top: 5px;
+  right: 22px;
+  color: #4D4D4D;
+}
+.confidentiality__text {
   width: 500px;
 }
