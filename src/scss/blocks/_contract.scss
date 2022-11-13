@@ -1,0 +1,26 @@
+.contract {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.5);
+    &__wrapper {
+        margin: 100px 0;
+        position: relative;
+        width: 1200px;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: url('../img/overloy_bg.png') center center/cover no-repeat;
+        padding: 35px 0 63px 53px;
+        
+    }
+    &__text {
+        width: 1000px;
+    }
+}
