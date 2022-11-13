@@ -18,12 +18,12 @@
                 <nav>
                     <ul class="menu__list">
                         <li class="menu__link"><a href="#">Каталог</a></li>
-                        <li class="menu__link"><a href="#">Доставка</a></li>
+                        <li class="menu__link"><a data-deliveryBtn href="#">Доставка</a></li>
                         <li class="menu__link"><a href="#">О нас</a></li>
                     </ul>
                 </nav>
     
-                <button class="btn">Связаться с нами</button>
+                <button data-consultation class="btn">Связаться с нами</button>
             </div>
             
         </div>
@@ -49,21 +49,24 @@
     </section>
 
     <section class="promo">
-        <div class="promo__wrapper">
-            <img src="img/bgIMG.png" alt="bg">
-
-            <span class="promo__line_top"></span>
-            <span class="promo__line_right"></span>
-            <span class="promo__line_bottom"></span>
-            <span class="promo__line_left"></span>
-
-            <div class="promo__consultation">
-                <div class="promo__consultation-title">Потрібна консультація?</div>
-                <div class="promo__consultation-subtitle">
-                    Не знаєш, що вибрати? Залиш номер <br> телефону, <br>
-                    і наші консультанти оперативно зателефонують щоб обкашляти всі питання
+        <div class="container">
+            <div class="promo__wrapper">
+                <img src="img/bgIMG.png" alt="bg">
+    
+                <!-- <span class="promo__line_top"></span>
+                <span class="promo__line_right"></span>
+                <span class="promo__line_bottom"></span>
+                <span class="promo__line_left"></span> -->
+    
+                <div class="promo__border"></div>
+                <div class="promo__consultation">
+                    <div class="promo__consultation-title">Потрібна консультація?</div>
+                    <div class="promo__consultation-subtitle">
+                        Не знаєш, що вибрати? Залиш номер <br> телефону, <br>
+                        і наші консультанти оперативно зателефонують щоб обкашляти всі питання
+                    </div>
+                    <button data-consultation class="promo__consultation-btn btn">ЗАМОВИТИ ДЗВІНОК</button>
                 </div>
-                <button class="promo__consultation-btn btn">ЗАМОВИТИ ДЗВІНОК</button>
             </div>
         </div>
     </section>
@@ -392,10 +395,10 @@
                 </div>
     
                 <div class="footer__items">
-                    <a href="#" class="footer__item">Доставка та оплата</a>
-                    <a href="#" class="footer__item">Гарантiя та повернення</a>
-                    <a href="#" class="footer__item">договiр оферти</a>
-                    <a href="#" class="footer__item">Політика конфіденційності</a>
+                    <a data-deliveryBtn href="#" class="footer__item">Доставка та оплата</a>
+                    <a data-returnBtn href="#" class="footer__item">Гарантiя та повернення</a>
+                    <a data-contractBtn href="#" class="footer__item">договiр оферти</a>
+                    <a data-confidentialityBtn href="#" class="footer__item">Політика конфіденційності</a>
                 </div>
     
                 <div class="footer__links">
@@ -415,7 +418,7 @@
     </footer>
 
     <!-- Модальное окно выбранного товара -->
-    <section class="overlay">
+    <section class="overlay hide">
         <div class="overlay__wrapper">
             <div class="overlay__close close">&times;</div>
 
@@ -472,11 +475,11 @@
     </section>
 
     <!-- Модальное окно обратного звонка -->
-    <section class="consultation">
+    <section class="consultation hide">
         <div class="consultation__dialog">
             <div class="consultation__content">
                 <form action="#">
-                    <div data-close class="consultation__close close">&times;</div>
+                    <div data-consultationClose class="consultation__close close">&times;</div>
                     <div class="consultation__title">Ми зв'яжемося з вами як можна швидше!</div>
                     <input required placeholder="Ваше ім'я" name="name" type="text" class="consultation__input">
                     <input required placeholder="Ваш номер телефону" name="phone" type="phone" class="consultation__input">
@@ -487,10 +490,10 @@
     </section>
 
     <!-- Модальное окно доставки и оплаты -->
-    <section class="delivery">
+    <section class="delivery hide">
         <div class="delivery__wrapper">
             <div class="delivery__title modal__title">ОПЛАТА ТА ДОСТАВКА</div>
-            <div class="delivery__close close">&times;</div>
+            <div data-deliveryClose class="delivery__close close">&times;</div>
             <div class="divider"></div>
             <div class="delivery__item">
                 <div class="delivery__subtitle modal__subtitle">ОПЛАТА ОНЛАЙН</div>
@@ -513,10 +516,10 @@
     </section>
 
     <!-- Модальное окно возврата товара -->
-    <section class="return">
+    <section class="return hide">
         <div class="return__wrapper">
             <div class="return__title modal__title">Гарантiя та повернення</div>
-            <div class="return__close close">&times;</div>
+            <div data-returnClose class="return__close close">&times;</div>
             <div class="divider"></div>
             <div class="return__text modal__text">
                 Будь-який товар, придбаний у нас на сайті можна обміняти або повернути протягом 14 днів після отримання посилки без слідів використання.
@@ -527,10 +530,10 @@
     </section>
 
     <!-- Модальное окно Конфедициальности -->
-    <section class="confidentiality">
+    <section class="confidentiality hide">
         <div class="confidentiality__wrapper">
             <div class="confidentiality__title modal__title">ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ</div>
-            <div class="confidentiality__close close">&times;</div>
+            <div data-confidentialityClose class="confidentiality__close close">&times;</div>
             <div class="divider"></div>
             <div class="confidentiality__text modal__text">
                 Ця політика охоплює, як ми використовуємо вашу особисту інформацію. <br> Ми серйозно ставимося до вашої конфіденційності та вживаємо всіх заходів для захисту вашої особистої інформації. <br> Будь-яка отримана особиста інформація використовуватиметься тільки для виконання вашого замовлення. <br> Ми не будемо продавати чи розповсюджувати вашу інформацію третім особам.</div>
@@ -539,7 +542,8 @@
     </section>
 
     <!-- Модальное окно договора -->
-    <section class="contract">
+    <section class="contract hide">
+        <div data-contractClose class="contract__close">&times;</div>
         <div class="contract__wrapper">
             <div class="contract__title modal__title">ДОГОВІР ПУБЛІЧНОЇ ОФЕРТИ</div>
             <div class="divider"></div>

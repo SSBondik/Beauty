@@ -1,5 +1,4 @@
 .return {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -19,6 +18,7 @@
         padding: 35px 0 63px 53px;
     }
     &__close {
+        position: fixed;
         top: 5px;
         right: 22px;
         color: #4D4D4D;

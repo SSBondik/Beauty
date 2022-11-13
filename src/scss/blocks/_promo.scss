@@ -4,55 +4,27 @@ min-height: 850px;
     &__wrapper {
         position: relative;
         height: 850px;
-        width: 1600px;
+        width: auto;
         margin: 0 auto;
         background-color: #F8F1E3;
-
         img {
-            position: absolute;
-            right: 0;
-            z-index: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
+    }
+    &__border {
+        position: absolute;
+        border: 6px solid $white;
+        z-index: 0;
+        width: 85%;
+        height: 85%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
-    &__line {
-        &_top {
-            position: absolute;
-            z-index: 5;
-            border: 3px solid $white;
-            width: 1400px;
-            top: 99px;
-            left: 93px;
-            background-color: $white;
-        }
-        &_right {
-            position: absolute;
-            z-index: 5;
-            border: 3px solid $white;
-            height: 650px;
-            top: 99px;
-            right: 107px;
-            background-color: $white;
-        }
-        &_bottom {
-            position: absolute;
-            z-index: 5;
-            border: 3px solid $white;
-            width: 1400px;
-            bottom: 99px;
-            left: 93px;
-            background-color: $white;
-        }
-        &_left {
-            position: absolute;
-            z-index: 5;
-            border: 3px solid $white;
-            height: 650px;
-            top: 99px;
-            left: 93px;
-            background-color: $white;
-        }
-    }
+    
     &__consultation {
         position: absolute;
         width: 455px;
@@ -60,8 +32,8 @@ min-height: 850px;
         top: 200px;
         left: 200px;
         &-title {
-            font-size: 60px;
-            line-height: 72px;
+            font-size: 50px;
+            line-height: 62px;
             font-weight: 700;
         }
         &-subtitle {

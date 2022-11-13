@@ -79,6 +79,27 @@ a {
   color: #4D4D4D;
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .menu {
   min-height: 150px;
   padding-top: 30px;
@@ -119,50 +140,24 @@ a {
 .promo__wrapper {
   position: relative;
   height: 850px;
-  width: 1600px;
+  width: auto;
   margin: 0 auto;
   background-color: #F8F1E3;
 }
 .promo__wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.promo__border {
   position: absolute;
-  right: 0;
+  border: 6px solid rgb(255, 255, 255);
   z-index: 0;
-}
-.promo__line_top {
-  position: absolute;
-  z-index: 5;
-  border: 3px solid rgb(255, 255, 255);
-  width: 1400px;
-  top: 99px;
-  left: 93px;
-  background-color: rgb(255, 255, 255);
-}
-.promo__line_right {
-  position: absolute;
-  z-index: 5;
-  border: 3px solid rgb(255, 255, 255);
-  height: 650px;
-  top: 99px;
-  right: 107px;
-  background-color: rgb(255, 255, 255);
-}
-.promo__line_bottom {
-  position: absolute;
-  z-index: 5;
-  border: 3px solid rgb(255, 255, 255);
-  width: 1400px;
-  bottom: 99px;
-  left: 93px;
-  background-color: rgb(255, 255, 255);
-}
-.promo__line_left {
-  position: absolute;
-  z-index: 5;
-  border: 3px solid rgb(255, 255, 255);
-  height: 650px;
-  top: 99px;
-  left: 93px;
-  background-color: rgb(255, 255, 255);
+  width: 85%;
+  height: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .promo__consultation {
   position: absolute;
@@ -172,8 +167,8 @@ a {
   left: 200px;
 }
 .promo__consultation-title {
-  font-size: 60px;
-  line-height: 72px;
+  font-size: 50px;
+  line-height: 62px;
   font-weight: 700;
 }
 .promo__consultation-subtitle {
@@ -329,7 +324,6 @@ a {
 }
 
 .overlay {
-  display: none;
   position: fixed;
   justify-content: center;
   align-items: center;
@@ -696,7 +690,6 @@ a {
 }
 
 .consultation {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -757,7 +750,6 @@ a {
 }
 
 .delivery {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -780,7 +772,6 @@ a {
 }
 
 .return {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -801,6 +792,7 @@ a {
   padding: 35px 0 63px 53px;
 }
 .return__close {
+  position: fixed;
   top: 5px;
   right: 22px;
   color: #4D4D4D;
@@ -810,7 +802,6 @@ a {
 }
 
 .confidentiality {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -840,26 +831,37 @@ a {
 }
 
 .contract {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 15;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .contract__wrapper {
-  margin: 100px 0;
-  position: relative;
+  position: absolute;
   width: 1200px;
-  height: auto;
+  height: 700px;
+  overflow: scroll;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: url("../img/overloy_bg.png") center center/cover no-repeat;
   padding: 35px 0 63px 53px;
+}
+.contract__close {
+  position: fixed;
+  top: 55px;
+  right: 300px;
+  color: #4D4D4D;
+  font-size: 60px;
+  cursor: pointer;
+  transition: all 0.5s;
+  z-index: 15;
+}
+.contract__close:hover {
+  transform: scale(120%);
 }
 .contract__text {
   width: 1000px;
