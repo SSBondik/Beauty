@@ -271,21 +271,6 @@ a {
   max-width: 100%;
   height: 200px;
 }
-.catalog-item__deal {
-  margin: 20px auto 0 auto;
-  position: relative;
-  height: 0;
-  width: 68px;
-  color: rgb(230, 68, 68);
-  border-top: 20px solid #999;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
-}
-.catalog-item__deal span {
-  position: absolute;
-  bottom: 0px;
-  left: 5px;
-}
 .catalog-item__subtitle {
   font-weight: 500;
   text-transform: uppercase;
@@ -296,6 +281,12 @@ a {
   color: #303030;
   display: block;
   text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.catalog-item__subtitle:hover {
+  transform: scale(110%);
+  color: #D785A1;
 }
 .catalog-item__descr {
   color: #999;
@@ -677,13 +668,14 @@ a {
 }
 .footer__item {
   color: black;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 40px;
   text-transform: uppercase;
 }
 .footer__links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   align-content: center;
 }
@@ -693,6 +685,11 @@ a {
 .footer__link img {
   height: 40px;
   width: 40px;
+  transition: all 0.5s;
+  color: red;
+}
+.footer__link img:hover {
+  transform: scale(120%);
 }
 
 .consultation {
@@ -777,36 +774,6 @@ a {
   color: #4D4D4D;
 }
 
-.return {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 15;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.return__wrapper {
-  position: relative;
-  width: 700px;
-  height: 400px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: url("../img/overloy_bg.png") center center/cover no-repeat;
-  padding: 35px 0 63px 53px;
-}
-.return__close {
-  position: fixed;
-  top: 5px;
-  right: 22px;
-  color: #4D4D4D;
-}
-.return__text {
-  width: 500px;
-}
-
 .confidentiality {
   position: fixed;
   top: 0;
@@ -871,4 +838,87 @@ a {
 }
 .contract__text {
   width: 1000px;
+}
+
+.purchase {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.purchase__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  width: 450px;
+  height: 800px;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
+  background: url("../img/overloy_bg.png") center center/cover no-repeat;
+  padding: 40px;
+}
+.purchase__img {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+.purchase__img img {
+  height: 100%;
+  width: 100%;
+}
+.purchase__descr {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 0.6px;
+  line-height: 1.5;
+  color: #303030;
+  display: block;
+  text-align: center;
+}
+.purchase__price {
+  display: flex;
+  margin: 0 auto;
+  width: 110px;
+  justify-content: space-around;
+  align-content: center;
+}
+.purchase__price-num {
+  font-size: 30px;
+}
+.purchase__price span {
+  font-size: 30px;
+}
+.purchase__count {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-content: center;
+  width: 100px;
+}
+.purchase__count-amount, .purchase__count-decrease, .purchase__count-increase {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 300;
+}
+.purchase__count-decrease, .purchase__count-increase {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.purchase__count-decrease:hover, .purchase__count-increase:hover {
+  font-weight: 500;
+  color: #D785A1;
+  transform: scale(150%);
+}
+.purchase__count-decrease {
+  margin-right: 10px;
+}
+.purchase__count-increase {
+  margin-left: 10px;
 }

@@ -19,21 +19,28 @@
     }
     &__item {
         color: black;
-        font-size: 14px;
+        font-size: 18px;
         line-height: 40px;
         text-transform: uppercase;
     }
     &__links {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
         align-content: center;
     }
     &__link {
         padding: 10px;
+        
         img {
             height: 40px;
             width: 40px;
+            transition: all 0.5s;
+            color: red;
+            &:hover {
+                transform: scale(120%);
+            }
         }
     }
 }

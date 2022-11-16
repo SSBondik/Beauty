@@ -85,21 +85,6 @@
             max-width: 100%;
             height: 200px;
         }
-        &__deal {
-            margin: 20px auto 0 auto;
-            position: relative;
-            height: 0;
-            width: 68px;
-            color: rgb(230, 68, 68);
-            border-top: 20px solid $grey;
-            border-left: 9px solid transparent;
-            border-right: 9px solid transparent;
-            span {
-                position: absolute;
-                bottom: 0px;
-                left: 5px;
-            }
-        }
         &__subtitle {
             font-weight: 500;
             text-transform: uppercase;
@@ -110,6 +95,12 @@
             color: $dark;
             display: block;
             text-align: center;
+            cursor: pointer;
+            transition: all 0.5s;
+            &:hover {
+                transform: scale(110%);
+                color: $pink;
+            }
         }
         &__descr{
             color: $grey;

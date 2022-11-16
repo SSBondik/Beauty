@@ -1,0 +1,83 @@
+.purchase{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.5);
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        width: 450px;
+        height: 800px;
+        right: 20px;
+        top: 20px;
+        bottom: 20px;
+        background: url('../img/overloy_bg.png') center center/cover no-repeat;
+        padding: 40px;
+    }
+    &__img {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &__descr {
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 22px;
+        letter-spacing: .6px;
+        line-height: 1.5;
+        color: $dark;
+        display: block;
+        text-align: center;
+    }
+    &__price {
+        display: flex;
+        margin: 0 auto;
+        width: 110px;
+        justify-content: space-around;
+        align-content: center;
+        &-num {
+            font-size: 30px;
+        }
+        span {
+            font-size: 30px;
+        }
+    }
+    &__count {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-around;
+        align-content: center;
+        width: 100px;
+        &-amount, &-decrease, &-increase {
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: 300;
+        }
+        &-decrease, &-increase {
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+                font-weight: 500;
+                color: $pink;
+                transform: scale(150%);
+            }
+        }
+        &-decrease {
+            margin-right: 10px;
+            
+        }
+        &-increase {
+            margin-left: 10px;
+        }
+    }
+}

@@ -103,9 +103,6 @@ window.addEventListener('DOMContentLoaded', () => {
     deliveryModal = document.querySelector('.delivery'),
     deliveryModalBtn = document.querySelectorAll('[data-deliveryBtn]'),
     deliveryClose = document.querySelector('[data-deliveryClose]'),
-    returnModal = document.querySelector('.return'),
-    returnModalBtn = document.querySelector('[data-returnBtn]'),
-    returnClose = document.querySelector('[data-returnClose]'),
     confidentialityModal = document.querySelector('.confidentiality'),
     confidentialityModalBtn = document.querySelector('[data-confidentialityBtn]'),
     confidentialityClose = document.querySelector('[data-confidentialityClose]'),
@@ -116,12 +113,15 @@ window.addEventListener('DOMContentLoaded', () => {
     tabsContent = document.querySelectorAll('.catalog__content'),
     tabsParent = document.querySelector('.catalog__tabs'),
     overlayItem = document.querySelector('.overlay'),
-    overlayBtn = document.querySelectorAll('.catalog-item__btn'),
+    overlayDescr = document.querySelectorAll('[data-descr]'),
     overlayClose = overlayItem.querySelector('.overlay__close'),
-    increaseBtn = document.querySelector('.overlay__count-increase'),
-    decreaseBtn = document.querySelector('.overlay__count-decrease'),
-    amount = document.querySelector('.overlay__count-amount'),
-    priceItem = document.querySelector('.overlay__count-price');
+    increaseBtn = document.querySelector('.purchase__count-increase'),
+    decreaseBtn = document.querySelector('.purchase__count-decrease'),
+    amount = document.querySelector('.purchase__count-amount'),
+    priceItem = document.querySelector('.purchase__price-num'),
+    purchaseModal = document.querySelector('.purchase'),
+    purchaseBtnBue = document.querySelectorAll('[data-purchaseBtnBue]'),
+    purchaseClose = document.querySelector('.purchase__close');
 
   //МОДАЛЬНЫЕ ОКНА
   document.addEventListener('click', event => {
@@ -145,15 +145,6 @@ window.addEventListener('DOMContentLoaded', () => {
       modal = deliveryModal;
       closeModal(modal);
     }
-    //Модальное окно ВОЗВРАТ И ГАРАНТИЯ
-    if (target === returnModalBtn && returnModal.classList.contains('hide')) {
-      modal = returnModal;
-      openModal(modal);
-    }
-    if (target === returnClose && !returnModal.classList.contains('hide') || target === returnModal) {
-      modal = returnModal;
-      closeModal(modal);
-    }
     //Модальное окно Політика Конфіденційності
     if (target === confidentialityModalBtn && confidentialityModal.classList.contains('hide')) {
       modal = confidentialityModal;
@@ -170,6 +161,17 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     if (target === contractClose && !contractModal.classList.contains('hide') || target === contractModal) {
       modal = contractModal;
+      closeModal(modal);
+    }
+    //Корзина товаров
+    purchaseBtnBue.forEach(btn => {
+      if (target === btn && purchaseModal.classList.contains('hide')) {
+        modal = purchaseModal;
+        openModal(modal);
+      }
+    });
+    if (target === purchaseClose && !purchaseModal.classList.contains('hide') || target === purchaseModal) {
+      modal = purchaseModal;
       closeModal(modal);
     }
   });
@@ -215,7 +217,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   //Окно товара
-  overlayBtn.forEach(item => {
+  overlayDescr.forEach(item => {
     item.addEventListener('click', () => {
       overlayItem.classList.toggle('hide');
     });
@@ -232,20 +234,18 @@ window.addEventListener('DOMContentLoaded', () => {
   //Подсчёт стоимости
   const price = Number(priceItem.innerHTML);
   let totalPrice = price;
-  increaseBtn.addEventListener('click', () => {
-    let i = amount.innerHTML;
-    i++;
-    amount.innerHTML = i;
-    totalPrice += price;
-    priceItem.innerHTML = totalPrice;
-  });
-  decreaseBtn.addEventListener('click', () => {
-    let i = amount.innerHTML;
-    if (i == 1) {
-      return i;
-    } else {
-      i--;
-      amount.innerHTML = i;
+  let productQuantity = amount.innerHTML;
+  document.addEventListener('click', event => {
+    const target = event.target;
+    if (target === increaseBtn) {
+      productQuantity++;
+      amount.innerHTML = productQuantity;
+      totalPrice += price;
+      priceItem.innerHTML = totalPrice;
+    }
+    if (target === decreaseBtn && productQuantity > 1) {
+      productQuantity--;
+      amount.innerHTML = productQuantity;
       totalPrice -= price;
       priceItem.innerHTML = totalPrice;
     }
